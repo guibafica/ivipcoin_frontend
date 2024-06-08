@@ -1,30 +1,13 @@
-# React + TypeScript + Vite
+<h1 align="center">ivipcoin</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About this Project
 
-Currently, two official plugins are available:
+Aplicação de gerenciamento de tarefas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A aplicação deve ser capaz de criar, atualizar e excluir tarefas. As tarefas devem ter um título e uma descrição. O back-end deve ser responsável por armazenar as tarefas em um banco de dados Firebase e disponibilizá-las para o front-end.
 
-## Expanding the ESLint configuration
+# Author
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Made with 💚 by Guilherme Bafica 👋
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[![LinkedIn Badge](https://img.shields.io/badge/-GuilhermeBafica-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guilhermebafica/)](https://www.linkedin.com/in/guilhermebafica/)
