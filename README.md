@@ -1,5 +1,7 @@
 <h1 align="center">ivipcoin</h1>
 
+<h2 align="center"> *** EM CONSTRUÇÃO *** </h2>
+
 ## About this Project
 
 Aplicação de gerenciamento de tarefas.
@@ -9,13 +11,13 @@ A aplicação deve ser capaz de criar, atualizar e excluir tarefas. As tarefas d
 ## Funcionalidades
 
 - Frontend
+
   - CAs tarefas devem ser exibidas em uma lista na tela.
 
 - Backend
   - Responsável por armazenar as tarefas em um banco de dados Firebase.
   - Disponibiliza as tarefas para o frontend.
   - Rotas para criar, atualizar e excluir tarefas.
-
 
 # Author
 
