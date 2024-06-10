@@ -28,6 +28,22 @@ A aplicação deve ser capaz de criar, atualizar e excluir tarefas. As tarefas d
 - Banco de Dados Firebase
 - Express
 
+# Como rodar o projeto
+
+Versão do node utilizada: v20.9.0
+
+## Aplicação
+
+```bash
+# Para instalar as dependências do projeto
+yarn
+```
+
+```bash
+# Roda a aplicação -> http://localhost:5173
+yarn dev
+```
+
 # Author
 
 Made with 💚 by Guilherme Bafica 👋
