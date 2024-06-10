@@ -19,6 +19,15 @@ A aplicação deve ser capaz de criar, atualizar e excluir tarefas. As tarefas d
   - Disponibiliza as tarefas para o frontend.
   - Rotas para criar, atualizar e excluir tarefas.
 
+## Tecnologias do projeto
+
+- React.JS
+- Material UI
+- Node.js
+- TypeScript
+- Banco de Dados Firebase
+- Express
+
 # Author
 
 Made with 💚 by Guilherme Bafica 👋
