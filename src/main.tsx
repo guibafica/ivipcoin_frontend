@@ -6,7 +6,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 
 import { NotFound } from "./not-found-page";
 
-import { Index } from "./routes";
+// import { Dashboard } from "./routes/dashboard";
 import { Login } from "./routes/login";
 
 import "./index.css";
@@ -14,7 +14,7 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Index />, // user ? <Index /> : <Login />
+    element: <Login />, // user ? <Dashboard /> : <Login />
     errorElement: <NotFound />,
   },
   {
