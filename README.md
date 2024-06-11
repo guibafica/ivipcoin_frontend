@@ -8,6 +8,8 @@ Aplicação de gerenciamento de tarefas.
 
 A aplicação deve ser capaz de criar, atualizar e excluir tarefas. As tarefas devem ter um título e uma descrição. O back-end deve ser responsável por armazenar as tarefas em um banco de dados Firebase e disponibilizá-las para o front-end.
 
+<!-- A data de entrega do teste e no dia 22/06/2024. -->
+
 ## Funcionalidades
 
 - Frontend
