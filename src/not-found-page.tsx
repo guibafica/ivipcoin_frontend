@@ -29,14 +29,14 @@ export function NotFound() {
 
   return (
     <div className="h-screen w-screen flex justify-center items-center">
-      <div className="w-[800px] h-[480px] bg-slate-200 rounded-lg overflow-hidden flex flex-col items-center justify-between">
-        <div className="w-full h-10 bg-slate-500 flex flex-row items-center justify-start p-4 gap-3">
+      <div className="w-[800px] h-[480px] bg-slate-500 rounded-lg overflow-hidden flex flex-col items-center justify-between border-4 border-slate-500">
+        <div className="w-full h-10 flex flex-row items-center justify-start p-4 gap-3">
           <HeaderButton bgColor="bg-rose-500" />
           <HeaderButton bgColor="bg-yellow-300" />
           <HeaderButton bgColor="bg-green-500" />
         </div>
 
-        <div className="w-full h-full flex items-center justify-between flex-row p-8">
+        <div className="w-full h-full flex bg-slate-200 items-center justify-between flex-row p-8">
           <img src={notFoundIcon} className="w-2/5" />
 
           <div className="w-3/5 flex flex-col items-center justify-center gap-1">
