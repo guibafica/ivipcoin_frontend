@@ -12,9 +12,21 @@ A aplicação deve ser capaz de criar, atualizar e excluir tarefas. As tarefas d
 
 ## Funcionalidades
 
+<!--
+[] - Possibilidade de escolher cor da tarefa;
+[] - Seleção de status da tarefa;
+-->
+
+- Requisitos Obrigatório:
+
+  - Implementar autenticação de usuários.
+  - Implementar paginação na listagem de tarefas.
+  - Implementar busca de tarefas.
+  - Implementar filtros na listagem de tarefas.
+
 - Frontend
 
-  - CAs tarefas devem ser exibidas em uma lista na tela.
+  - As tarefas devem ser exibidas em uma lista na tela.
 
 - Backend
   - Responsável por armazenar as tarefas em um banco de dados Firebase.
