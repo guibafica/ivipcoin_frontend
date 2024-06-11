@@ -15,6 +15,7 @@ A aplicação deve ser capaz de criar, atualizar e excluir tarefas. As tarefas d
 <!--
 [] - Possibilidade de escolher cor da tarefa;
 [] - Seleção de status da tarefa;
+[] - Add transitions
 -->
 
 - Requisitos Obrigatório:
