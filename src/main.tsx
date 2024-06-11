@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { createTheme, ThemeProvider } from "@mui/material";
+
 import { NotFound } from "./not-found-page";
 
 import { Index } from "./routes";
 import { Login } from "./routes/login";
-
-// import { App } from "./app";
 
 import "./index.css";
 
@@ -23,6 +23,12 @@ const router = createBrowserRouter([
   },
 ]);
 
+const theme = createTheme({
+  typography: {
+    fontFamily: ["Dosis", "cursive"].join(","),
+  },
+});
+
 console.log(" ");
 console.log(" ");
 console.log(
@@ -33,7 +39,9 @@ console.log(" ");
 console.log(" ");
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <ThemeProvider theme={theme}>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </ThemeProvider>
 );

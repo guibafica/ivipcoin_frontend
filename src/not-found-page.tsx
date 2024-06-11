@@ -1,6 +1,7 @@
 import { useRouteError } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import { useNavigate } from "react-router-dom";
+import { Button, Typography } from "@mui/material";
 
 import notFoundIcon from "../src/assets/not-found-icon.svg";
 import { useCallback } from "react";
@@ -15,6 +16,8 @@ function HeaderButton({ bgColor }: IHeaderButtonProps) {
   );
 }
 
+// [] - responsive
+
 export function NotFound() {
   const error = useRouteError();
   const navigate = useNavigate();
@@ -28,7 +31,7 @@ export function NotFound() {
   }, [navigate]);
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
+    <div className="h-screen w-screen flex justify-center items-center bg-slate-900 text-slate-50 antialiased">
       <div className="w-[800px] h-[480px] bg-slate-500 rounded-lg overflow-hidden flex flex-col items-center justify-between border-4 border-slate-500">
         <div className="w-full h-10 flex flex-row items-center justify-start p-4 gap-3">
           <HeaderButton bgColor="bg-rose-500" />
@@ -37,18 +40,28 @@ export function NotFound() {
         </div>
 
         <div className="w-full h-full flex bg-slate-200 items-center justify-between flex-row p-8">
-          <img src={notFoundIcon} className="w-2/5" />
+          <img src={notFoundIcon} className="w-3/5" />
 
-          <div className="w-3/5 flex flex-col items-center justify-center gap-1">
-            <h1 className="text-5xl text-slate-800 font-extrabold">404</h1>
-            <p className="text-slate-600 text-lg">página não encontrada :(</p>
+          <div className="w-2/5 flex flex-col items-center justify-center gap-1">
+            <Typography
+              variant="h1"
+              component="h1"
+              className="text-5xl text-slate-800 font-extrabold"
+            >
+              404
+            </Typography>
 
-            <button
+            <Typography variant="h3" className="text-slate-600 text-lg">
+              página não encontrada :(
+            </Typography>
+
+            <Button
+              variant="contained"
               onClick={handleNavigateToHome}
               className="mt-6 px-5 py-2 bg-main-yellow text-slate-800 font-semibold rounded-md cursor-pointer transition-all ease-in-out hover:bg-yellow-400"
             >
               VOLTAR PARA HOME
-            </button>
+            </Button>
           </div>
         </div>
       </div>
