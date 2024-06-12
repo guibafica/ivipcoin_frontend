@@ -32,9 +32,9 @@ export function Login() {
 
   return (
     <div className="h-screen w-screen flex justify-center items-center bg-slate-900 text-slate-50 antialiased">
-      <div className="max-w-screen-xl w-11/12 h-4/5 max-h-[600px] py-4 bg-slate-100 rounded-lg overflow-hidden flex flex-row items-center justify-between">
-        <div className="w-2/4 px-10 pb-4 flex flex-col">
-          <div className="flex flex-rom justify-start items-center">
+      <div className="max-w-screen-xl w-11/12 h-4/5 max-h-[600px] py-4 bg-slate-100 rounded-lg overflow-hidden flex flex-row items-center justify-between max-md:h-5/6 max-md:max-h-full max-md:flex-col max-md:justify-center">
+        <div className="w-2/4 px-10 pb-4 flex flex-col max-md:w-full">
+          <div className="flex flex-rom justify-start items-center max-md:justify-center">
             <img src={goTaskIcon} className="w-10" />
 
             <Typography
@@ -104,7 +104,7 @@ export function Login() {
           </div>
         </div>
 
-        <div className="w-2/4 h-full pr-4">
+        <div className="w-2/4 h-full pr-4 max-md:hidden">
           <div
             className="w-full h-full bg-slate-950 rounded-ss-xl rounded-es-[6rem] overflow-hidden bg-contain flex flex-col justify-center items-center"
             style={{ backgroundImage: `url(${bgImg})` }}
