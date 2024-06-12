@@ -6,7 +6,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 
 import { NotFound } from "./not-found-page";
 
-// import { Dashboard } from "./routes/dashboard";
+import { Dashboard } from "./routes/dashboard";
 import { Login } from "./routes/login";
 
 import "./index.css";
@@ -20,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login />,
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard />,
   },
 ]);
 

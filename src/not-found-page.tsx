@@ -16,8 +16,6 @@ function HeaderButton({ bgColor }: IHeaderButtonProps) {
   );
 }
 
-// [] - responsive
-
 export function NotFound() {
   const error = useRouteError();
   const navigate = useNavigate();
