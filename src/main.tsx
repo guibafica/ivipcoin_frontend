@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import { Toaster } from "sonner";
 import { createTheme, ThemeProvider } from "@mui/material";
 
 import { NotFound } from "./not-found-page";
@@ -46,6 +46,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <ThemeProvider theme={theme}>
     <React.StrictMode>
       <RouterProvider router={router} />
+      <Toaster richColors />
     </React.StrictMode>
   </ThemeProvider>
 );

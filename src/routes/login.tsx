@@ -1,7 +1,8 @@
 import { useCallback, useState } from "react";
 import { Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { z } from "zod";
+// import { z } from "zod";
+import { toast } from "sonner";
 
 import goTaskIcon from "../../public/faviconIcon.svg";
 import loginIllustrationSvg from "../assets/login-illustration-svg.svg";
@@ -18,8 +19,18 @@ export function Login() {
   const [isPasswordOnError, setisPasswordOnError] = useState(false);
 
   // Try catch with error
-  // Toas
+  // Toast
   const handleSubmit = useCallback(() => {
+    if (!email) {
+      toast.warning("Informe seu email para continuar!");
+      return;
+    }
+
+    if (!password) {
+      toast.warning("Informe sua senha para continuar!");
+      return;
+    }
+
     // const login = z.object({
     //   email: z.string().email("asdas"),
     //   password: z.string(),
@@ -27,7 +38,7 @@ export function Login() {
     // login.parse({ email, password });
     // type login = z.infer<typeof login>;
     // console.log("LOGIN: ", login);
-    // navigate("/dashboard");
+    navigate("/dashboard");
   }, [navigate, email, password]);
 
   return (
