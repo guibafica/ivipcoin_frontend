@@ -2124,6 +2124,11 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+lucide-react@^0.394.0:
+  version "0.394.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.394.0.tgz#ea496bcdb0a1295219936766f70b48235624e1ef"
+  integrity sha512-PzTbJ0bsyXRhH59k5qe7MpTd5MxlpYZUcM9kGSwvPGAfnn0J6FElDwu2EX6Vuh//F7y60rcVJiFQ7EK9DCMgfw==
+
 material-ui@^0.20.2:
   version "0.20.2"
   resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-0.20.2.tgz#5fc9b4b62b691d3b16c89d8e54597a0412b52c7d"
