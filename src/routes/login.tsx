@@ -109,8 +109,10 @@ export function Login() {
             className="w-full h-full bg-slate-950 rounded-ss-xl rounded-es-[6rem] overflow-hidden bg-contain flex flex-col justify-center items-center"
             style={{ backgroundImage: `url(${bgImg})` }}
           >
-            <div className="hexagon w-4/5 h-4/5 bg-slate-100  flex items-center justify-center text-white rounded-lg overflow-hidden">
-              <img src={loginIllustrationSvg} className="w-9/12" />
+            <div className="hexagon w-4/5 h-4/5 bg-main-yellow/90 flex items-center justify-center">
+              <div className="hexagon w-11/12 h-full bg-slate-100 flex items-center justify-center overflow-hidden">
+                <img src={loginIllustrationSvg} className="w-9/12" />
+              </div>
             </div>
 
             <Typography
