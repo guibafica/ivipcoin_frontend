@@ -11,9 +11,16 @@ interface ITaskCardProps {
 }
 
 export function TaskCard(props: ITaskCardProps) {
+  const borderColor = props.payload.color || "transparent";
+
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="rounded-md text-left flex-col bg-slate-800 p-5 gap-3 overflow-hidden relative outline-none hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-main-yellow">
+      <Dialog.Trigger
+        className="DialogTaskCardTrigger"
+        style={{
+          border: `1px solid ${borderColor}`,
+        }}
+      >
         <span className="text-sm font-medium text-slate-300">
           {formatDistanceToNow(props.payload.date, {
             addSufix: true, // @ts-expect-error 'formatDistanceToNow locale'
