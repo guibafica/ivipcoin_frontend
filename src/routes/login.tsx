@@ -15,18 +15,23 @@ export function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isEmailOnError, setisEmailOnError] = useState(false);
-  const [isPasswordOnError, setisPasswordOnError] = useState(false);
+  const [isEmailOnError, setIsEmailOnError] = useState(false);
+  const [isPasswordOnError, setIsPasswordOnError] = useState(false);
 
   // Try catch with error
   // Toast
   const handleSubmit = useCallback(() => {
+    setIsEmailOnError(false);
+    setIsPasswordOnError(false);
+
     if (!email) {
+      setIsEmailOnError(true);
       toast.warning("Informe seu email para continuar!");
       return;
     }
 
     if (!password) {
+      setIsPasswordOnError(true);
       toast.warning("Informe sua senha para continuar!");
       return;
     }

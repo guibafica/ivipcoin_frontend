@@ -25,6 +25,11 @@ const useStyles = makeStyles((theme) => ({
         borderColor: colors.primary.yellow,
       },
     },
+    "&  .MuiFormHelperText-root.Mui-error": {
+      background: "#f1f5f9",
+      margin: 0,
+      paddingLeft: 10,
+    },
   },
 }));
 
@@ -51,6 +56,7 @@ export function Input({
       onChange={(e: ChangeEvent<HTMLInputElement>) => {
         onChange ? onChange(e.target.value) : () => {};
       }}
+      // FormHelperTextProps={{ style: { background: "#000" } }}
     />
   );
 }
