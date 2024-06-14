@@ -67,7 +67,7 @@ export function Dashboard() {
     <>
       <Header />
 
-      <div className="h-screen w-screen flex flex-col justify-start items-center pt-16  px-16 bg-slate-900 text-slate-50 antialiased">
+      <div className="h-full min-h-screen w-screen flex flex-col justify-start items-center pt-16  px-16 bg-slate-900 text-slate-50 antialiased">
         {/* <div className="mx-auto max-w-6xl my-12 space-y-6 px-5 md:px-0"> */}
         <form className="w-full py-4">
           <input
