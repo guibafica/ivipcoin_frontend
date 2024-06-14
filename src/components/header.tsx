@@ -7,8 +7,8 @@ import profilePic from "../assets/profilePic.webp";
 export function Header() {
   return (
     <div className="w-screen h-16 bg-slate-800 flex items-center justify-center absolute top-0 left-0">
-      <div className="w-full max-w-7xl h-full flex flex-row items-center justify-between px-16">
-        <div className="flex flex-row justify-start items-center w-full h-full">
+      <div className="w-full max-w-7xl h-full flex flex-row items-center justify-between px-16 max-md:px-4">
+        <div className="flex flex-row justify-start items-center w-full h-full max-md:w-2/6">
           <div className="flex flex-row justify-start items-center max-md:justify-center">
             <img src={goTaskIcon} className="w-10" />
 
@@ -20,9 +20,9 @@ export function Header() {
             </Typography>
           </div>
 
-          <div className="w-[1px] h-5/6 bg-slate-500 ml-4 mr-4" />
+          <div className="w-[1px] h-5/6 bg-slate-500 ml-4 mr-4 max-md:hidden" />
 
-          <div className="text-slate-100">
+          <div className="text-slate-100 max-md:hidden">
             <Typography className="text-xl font-semibold">Olá, John</Typography>
 
             <Typography className="text-xs font-extralight">
@@ -31,7 +31,7 @@ export function Header() {
           </div>
         </div>
 
-        <div className="flex flex-row items-center justify-end gap-4 w-full cursor-pointer">
+        <div className="flex flex-row items-center justify-end gap-4 w-full h-full cursor-pointer max-md:w-4/6">
           <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
             <img src={profilePic} className="w-full h-full object-cover" />
           </div>
