@@ -5,6 +5,8 @@ import { toast } from "sonner";
 
 import { colors } from "../utils/colors";
 
+import { SelectComponent } from "./select";
+
 interface INewTaskCardProps {
   onTaskCreated: (content: string) => void;
 }
@@ -123,6 +125,12 @@ export function NewTaskCard({ onTaskCreated }: INewTaskCardProps) {
               >
                 Adicionar uma task
               </span>
+
+              <div className="w-full flex flex-row items-center justify-between -mt-4 gap-x-10 mb-4">
+                <SelectComponent />
+
+                <SelectComponent />
+              </div>
 
               {shouldShowOnboarding ? (
                 <p className="text-base leading-6" style={{ color: "#94a3b8" }}>

@@ -36,12 +36,18 @@ A aplicação deve ser capaz de criar, atualizar e excluir tarefas. As tarefas d
 
 ## Tecnologias do projeto
 
-- React.JS
-- Material UI
-- Node.js
-- TypeScript
-- Banco de Dados Firebase
-- Express
+- React.JS:
+- Material UI:
+- Node.js:
+- TypeScript:
+- Banco de Dados Firebase:
+- Express:
+- Radix:
+- Date-fns:
+- Lucide:
+- Sonner:
+- Tailwind:
+- Zod:
 
 # Como rodar o projeto
 
