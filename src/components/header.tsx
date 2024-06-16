@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { ChevronRight } from "lucide-react";
 
-import goTaskIcon from "../../public/faviconIcon.svg";
+import goTaskIcon from "/faviconIcon.svg";
 import profilePic from "../assets/profilePic.webp";
 
 export function Header() {

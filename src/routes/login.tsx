@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // import { z } from "zod";
 import { toast } from "sonner";
 
-import goTaskIcon from "../../public/faviconIcon.svg";
+import goTaskIcon from "/faviconIcon.svg";
 import loginIllustrationSvg from "../assets/login-illustration-svg.svg";
 import bgImg from "../assets/bg2.jpg";
 
