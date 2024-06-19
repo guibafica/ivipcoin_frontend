@@ -1,13 +1,17 @@
-import { useCallback, ChangeEvent, useState } from "react";
+import { useCallback, ChangeEvent, useState, useEffect } from "react";
 import { toast } from "sonner";
 
 import { Header } from "../components/header";
 import { NewTaskCard } from "../components/new-task-card";
 import { TaskCard } from "../components/task-card";
+import { LoadingComponent } from "../components/loading";
 
 import { ITaskProps } from "../utils/interfaces/ITaskProps";
 
+import { processError } from "../utils/processError";
+
 export function Dashboard() {
+  const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [tasks, setTasks] = useState<ITaskProps[]>(() => {
     const tasksOnStorage = localStorage.getItem("tasks");
@@ -63,12 +67,31 @@ export function Dashboard() {
     }
   }, []);
 
+  const loadData = useCallback(() => {
+    try {
+      setLoading(true);
+
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+
+      const { message } = processError(error);
+
+      toast.error(message);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
+
   return (
     <>
+      <LoadingComponent isLoading={loading} />
+
       <Header />
 
       <div className="h-full min-h-screen w-screen flex flex-col justify-start items-center pt-16  px-16 bg-slate-900 text-slate-50 antialiased">
-        {/* <div className="mx-auto max-w-6xl my-12 space-y-6 px-5 md:px-0"> */}
         <form className="w-full py-4">
           <input
             type="text"
