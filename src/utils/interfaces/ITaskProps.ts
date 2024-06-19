@@ -1,6 +1,6 @@
 export interface ITaskProps {
   id: string;
-  date: Date;
+  createdAt: Date;
   body: string;
   color?:
     | "#cce5ff"
@@ -9,5 +9,5 @@ export interface ITaskProps {
     | "#eaffc2"
     | "#ff8097"
     | "transparent";
-  status: "new" | "started" | "waiting" | "finished";
+  status: number;
 }

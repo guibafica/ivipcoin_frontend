@@ -1,5 +1,6 @@
 import { useCallback, ChangeEvent, useState, useEffect } from "react";
 import { toast } from "sonner";
+import axios from "axios";
 
 import { Header } from "../components/header";
 import { NewTaskCard } from "../components/new-task-card";
@@ -67,9 +68,17 @@ export function Dashboard() {
     }
   }, []);
 
-  const loadData = useCallback(() => {
+  const loadData = useCallback(async () => {
     try {
       setLoading(true);
+
+      const response = await axios.get("http://localhost:3000/tasks");
+
+      setTasks(response.data);
+
+      console.log("-");
+      console.log("DATA: ", response.data[0]);
+      console.log("-");
 
       setLoading(false);
     } catch (error) {
@@ -111,7 +120,7 @@ export function Dashboard() {
               key={Math.random()}
               payload={{
                 id: currentTask.id,
-                date: currentTask.date,
+                createdAt: currentTask.createdAt,
                 body: currentTask.body,
                 color: currentTask.color,
                 status: currentTask.status,
@@ -120,7 +129,6 @@ export function Dashboard() {
             />
           ))}
         </div>
-        {/* </div> */}
       </div>
     </>
   );

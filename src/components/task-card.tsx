@@ -22,7 +22,7 @@ export function TaskCard(props: ITaskCardProps) {
         }}
       >
         <span className="text-sm font-medium text-slate-300">
-          {formatDistanceToNow(props.payload.date, {
+          {formatDistanceToNow(props.payload.createdAt, {
             addSufix: true, // @ts-expect-error 'formatDistanceToNow locale'
             locale: ptBR,
           })}{" "}
@@ -44,7 +44,7 @@ export function TaskCard(props: ITaskCardProps) {
 
           <div className="flex flex-1 flex-col gap-3 p-5">
             <span className="text-lg font-medium" style={{ color: "#cbd5e1" }}>
-              {formatDistanceToNow(props.payload.date, {
+              {formatDistanceToNow(props.payload.createdAt, {
                 addSufix: true, // @ts-expect-error formatDistanceToNow locale
                 locale: ptBR,
               })}{" "}
