@@ -14,13 +14,7 @@ import { processError } from "../utils/processError";
 export function Dashboard() {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
-  const [tasks, setTasks] = useState<ITaskProps[]>(() => {
-    const tasksOnStorage = localStorage.getItem("tasks");
-
-    if (tasksOnStorage) return JSON.parse(tasksOnStorage);
-
-    return [];
-  });
+  const [tasks, setTasks] = useState<ITaskProps[]>([]);
 
   const filteredTasks =
     search !== ""
@@ -45,7 +39,7 @@ export function Dashboard() {
 
       const tasksArray = [newTask, ...tasks];
 
-      setTasks(tasksArray);
+      // setTasks(tasksArray);
 
       localStorage.setItem("tasks", JSON.stringify(tasksArray));
     },
@@ -61,7 +55,7 @@ export function Dashboard() {
         (task: ITaskProps) => task.id !== id
       );
 
-      setTasks(newTasksArray);
+      // setTasks(newTasksArray);
       localStorage.setItem("tasks", JSON.stringify(newTasksArray));
 
       toast.success("Task deletada com sucesso!");

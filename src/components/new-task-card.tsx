@@ -13,6 +13,21 @@ interface INewTaskCardProps {
 
 let speechRecognition: SpeechRecognition | null = null;
 
+const statusOption = [
+  { key: "new", label: "Novo" },
+  { key: "started", label: "Começado" },
+  { key: "waiting", label: "Em espera" },
+  { key: "finished", label: "Finalizado" },
+];
+
+const colorsOption = [
+  { key: "#cce5ff", label: "Azul" },
+  { key: "#a3ffac", label: "Verde" },
+  { key: "#ffca99", label: "Laranja" },
+  { key: "#eaffc2", label: "Amarelo" },
+  { key: "#ff8097", label: "Vermelho" },
+];
+
 export function NewTaskCard({ onTaskCreated }: INewTaskCardProps) {
   const [shouldShowOnboarding, setShouldShowOnboarding] = useState(true);
   const [isRecording, setIsRecording] = useState(false);
@@ -127,12 +142,12 @@ export function NewTaskCard({ onTaskCreated }: INewTaskCardProps) {
               </span>
 
               <div className="w-full flex flex-row items-center justify-between -mt-4 gap-x-10 mb-4">
-                <SelectComponent />
+                <SelectComponent title="Status" options={statusOption} />
 
-                <SelectComponent />
+                <SelectComponent title="Cor" options={colorsOption} />
               </div>
 
-              {shouldShowOnboarding ? (
+              {/* {shouldShowOnboarding ? (
                 <p className="text-base leading-6" style={{ color: "#94a3b8" }}>
                   Começar{" "}
                   <button
@@ -162,10 +177,10 @@ export function NewTaskCard({ onTaskCreated }: INewTaskCardProps) {
                   className="text-base leading-6 bg-transparent resize-none flex-1 outline-none"
                   style={{ color: "#94a3b8" }}
                 />
-              )}
+              )} */}
             </div>
 
-            {isRecording ? (
+            {/* {isRecording ? (
               <button
                 type="button"
                 onClick={handleStopRecording}
@@ -190,7 +205,7 @@ export function NewTaskCard({ onTaskCreated }: INewTaskCardProps) {
               >
                 Salvar task
               </button>
-            )}
+            )} */}
           </form>
         </Dialog.Content>
       </Dialog.Portal>

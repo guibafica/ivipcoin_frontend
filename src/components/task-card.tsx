@@ -13,6 +13,10 @@ interface ITaskCardProps {
 export function TaskCard(props: ITaskCardProps) {
   const borderColor = props.payload.color || "transparent";
 
+  console.log(".");
+  console.log("props: ", props.payload);
+  console.log(".");
+
   return (
     <Dialog.Root>
       <Dialog.Trigger

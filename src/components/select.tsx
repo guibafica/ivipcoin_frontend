@@ -1,31 +1,61 @@
 import { useState, useCallback } from "react";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 
-// interface ISelectProps {
-// isOnError?: boolean;
-// errorMessage?: string;
-// title: string;
-// defaultValue?: string;
-// value?: string;
-// onChange?: (text: string) => void;
-// }
+interface IOptionsProps {
+  key: string;
+  label: string;
+}
 
-export function SelectComponent() {
-  const [age, setAge] = useState("");
+interface ISelectProps {
+  title: string;
+  options: IOptionsProps[];
+  // isOnError?: boolean;
+  // errorMessage?: string;
+  // title: string;
+  // defaultValue?: string;
+  // value?: string;
+  // onChange?: (text: string) => void;
+}
+
+export function SelectComponent({ title, options }: ISelectProps) {
+  const [selectedOption, setSelectedOption] = useState("");
 
   const handleChange = useCallback(() => {}, []);
 
   return (
-    <FormControl variant="standard" className="w-full z-50">
-      <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>
+    <FormControl
+      variant="standard"
+      className="w-full"
+      sx={{
+        "& .MuiSelect-select": {
+          borderBottom: "1px solid #cbd5e1",
+        },
+        "& .MuiSvgIcon-root": {
+          color: "#cbd5e1",
+        },
+      }}
+    >
+      <InputLabel color="success" sx={{ color: "#cbd5e1" }}>
+        {title}
+      </InputLabel>
 
-      <Select value={age} onChange={handleChange} label="Age">
+      <Select
+        value={selectedOption}
+        onChange={handleChange}
+        label={title}
+        MenuProps={{
+          style: { zIndex: 99999999 },
+        }}
+      >
         <MenuItem value="">
-          <em>None</em>
+          <em>Selecione</em>
         </MenuItem>
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+
+        {options.map((option) => (
+          <MenuItem key={option.key} value={option.key}>
+            {option.label}
+          </MenuItem>
+        ))}
       </Select>
     </FormControl>
   );
