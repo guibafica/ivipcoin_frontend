@@ -147,7 +147,7 @@ export function NewTaskCard({ onTaskCreated }: INewTaskCardProps) {
                 <SelectComponent title="Cor" options={colorsOption} />
               </div>
 
-              {/* {shouldShowOnboarding ? (
+              {shouldShowOnboarding ? (
                 <p className="text-base leading-6" style={{ color: "#94a3b8" }}>
                   Começar{" "}
                   <button
@@ -177,10 +177,10 @@ export function NewTaskCard({ onTaskCreated }: INewTaskCardProps) {
                   className="text-base leading-6 bg-transparent resize-none flex-1 outline-none"
                   style={{ color: "#94a3b8" }}
                 />
-              )} */}
+              )}
             </div>
 
-            {/* {isRecording ? (
+            {isRecording ? (
               <button
                 type="button"
                 onClick={handleStopRecording}
@@ -205,7 +205,7 @@ export function NewTaskCard({ onTaskCreated }: INewTaskCardProps) {
               >
                 Salvar task
               </button>
-            )} */}
+            )}
           </form>
         </Dialog.Content>
       </Dialog.Portal>

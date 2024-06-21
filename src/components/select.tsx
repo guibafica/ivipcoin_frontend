@@ -39,7 +39,16 @@ export function SelectComponent({ title, options }: ISelectProps) {
         {title}
       </InputLabel>
 
-      <Select
+      <select name="select">
+        <option value="">Selecione</option>
+        {options.map((option) => (
+          <option key={option.key} value={option.key}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+
+      {/* <Select
         value={selectedOption}
         onChange={handleChange}
         label={title}
@@ -56,7 +65,7 @@ export function SelectComponent({ title, options }: ISelectProps) {
             {option.label}
           </MenuItem>
         ))}
-      </Select>
+      </Select> */}
     </FormControl>
   );
 }
