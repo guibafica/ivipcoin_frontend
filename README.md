@@ -8,8 +8,6 @@ Aplicação de gerenciamento de tarefas.
 
 A aplicação deve ser capaz de criar, atualizar e excluir tarefas. As tarefas devem ter um título e uma descrição. O back-end deve ser responsável por armazenar as tarefas em um banco de dados Firebase e disponibilizá-las para o front-end.
 
-<!-- A data de entrega do teste e no dia 22/06/2024. -->
-
 ## Funcionalidades
 
 - Requisitos Obrigatório:
@@ -34,14 +32,12 @@ A aplicação deve ser capaz de criar, atualizar e excluir tarefas. As tarefas d
 - Material UI: Biblioteca de componentes de interface de usuário.
 - Node.js: Ambiente de execução JavaScript que permite executar código JavaScript no lado do servidor.
 - TypeScript: Superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem estática.
-- Banco de Dados Firebase: Plataforma desenvolvida pelo Google que oferece diversos serviços para facilitar o desenvolvimento de aplicativos.
-- Express: Framework web minimalista e flexível para Node.js.
 - Radix: Coleção de componentes JavaScript para construir interfaces de usuário.
 - Date-fns: Biblioteca moderna e simples para manipulação de datas em JavaScript.
 - Lucide: Biblioteca de ícones para React.
 - Sonner: Biblioteca para utilização de toast.
 - Tailwind: Framework de CSS altamente personalizável e de baixo nível para desenvolvimento de interfaces web.
-- Zod: Biblioteca JavaScript desenvolvida para validação de dados de forma eficiente e declarativa.
+- Yup: Biblioteca JavaScript desenvolvida para validação de dados.
 
 # Como rodar o projeto
 
